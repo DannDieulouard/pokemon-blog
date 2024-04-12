@@ -3,8 +3,8 @@ import HomePage from "./pages/HomePage";
 import PokemonDetailsPage from "./pages/PokemonDetailsPage";
 import PokemonByTypePage from "./pages/PokemonByTypePage";
 import PokemonRandomTeamPage from "./pages/PokemonRandomTeamPage";
-import PokemonFinderPage from "./pages/PokemonFinderPage";
 import PokemonByResistancePage from "./pages/PokemonByResistancePage";
+import SearchResultsPage from "./pages/SearchResultsPage";
 
 function App() {
   return (
@@ -14,8 +14,8 @@ function App() {
         <Route path="/pokemon-details/:pokemonId" element={<PokemonDetailsPage />} />
         <Route path="/pokemons-by-type/:type" element={<PokemonByTypePage />} />
         <Route path="/pokemon-random-team/" element={<PokemonRandomTeamPage />} />
-        <Route path="/pokemon-finder/" element={<PokemonFinderPage />} />
         <Route path="/pokemon-resistance/:type" element={<PokemonByResistancePage />} />
+        <Route path="/search/:searchText" element={<SearchResultsPage />} />
       </Routes>
     </BrowserRouter>
   );

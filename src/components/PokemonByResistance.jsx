@@ -13,7 +13,6 @@ const PokemonByResistance = () => {
     })
     .then((data) => {
         setPokemons(data);
-        console.log(data)
     });
 }, [type]);
 
