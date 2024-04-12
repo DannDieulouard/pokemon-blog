@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-const PokemonByType = () => {
+const PokemonByResistance = () => {
 
-    const {type} = useParams();
     const [pokemons, setPokemons] = useState([]);
+    const {type} = useParams();
 
     useEffect(() => {
-    fetch("https://pokebuildapi.fr/api/v1/pokemon/type/" + type)
+    fetch("https://pokebuildapi.fr/api/v1/pokemon/type/resistance/" + type)
     .then((response) => {
       return response.json();
     })
@@ -21,7 +21,7 @@ console.log(pokemons)
 
     return (
         <section> 
-            <h1>La liste de tous les pokemons de type {type} !</h1>
+            <h1>La liste de tous les pokemons résistants au type {type} </h1>
             {pokemons.map((pokemon) => {
                 return (
                     <div>
@@ -29,7 +29,7 @@ console.log(pokemons)
             <p>Name: {pokemon.name}</p>
             <p>Type: {pokemon.apiTypes.map((typePoke) => {
                  return (
-                     <p>{typePoke.name}</p>
+                     <h2>{typePoke.name}</h2>
                  )
             })}</p>
             <p>HP: {pokemon.stats.HP}</p>
@@ -45,4 +45,4 @@ console.log(pokemons)
     )
 }
 
-export default PokemonByType;
+export default PokemonByResistance;

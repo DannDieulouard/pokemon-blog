@@ -1,14 +1,14 @@
 import Header from "../components/Header";
-import PokemonByType from "../components/PokemonByType";
+import PokemonRandomTeam from "../components/PokemonRandomTeam";
 import Footer from "../components/Footer.jsx"
 
-const PokemonByTypePage = () => {
+const PokemonRandomTeamPage = () => {
     return (
         <>
         <Header />
-        <PokemonByType/>
+        <PokemonRandomTeam/>
         <Footer />
         </>
     )
 }
-export default PokemonByTypePage;
+export default PokemonRandomTeamPage;

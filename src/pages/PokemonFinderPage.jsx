@@ -1,14 +1,14 @@
 import Header from "../components/Header";
-import PokemonByType from "../components/PokemonByType";
+import PokemonFinder from "../components/PokemonFinder";
 import Footer from "../components/Footer.jsx"
 
-const PokemonByTypePage = () => {
+const PokemonFinderPage = () => {
     return (
         <>
         <Header />
-        <PokemonByType/>
+        <PokemonFinder/>
         <Footer />
         </>
     )
 }
-export default PokemonByTypePage;
+export default PokemonFinderPage;

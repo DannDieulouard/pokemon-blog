@@ -19,11 +19,12 @@ const PokemonDetails = () => {
 
 
     return (
-        <section> {      
+        <section> 
+            <h1>Les détails du pokemon</h1>{      
             !pokemon ? <p>Pokémon en cours de rechargement</p> :   
             <article>
+                <h2>{pokemon.name}</h2>
                <img src = {pokemon.image} alt=""/>
-               <p>Name: {pokemon.name}</p>
                <p>Type: {pokemon.apiTypes[(pokemon.apiTypes.length)-1].name}</p>
                <p>HP: {pokemon.stats.HP}</p>
                <p>defense: {pokemon.stats.attack}</p>

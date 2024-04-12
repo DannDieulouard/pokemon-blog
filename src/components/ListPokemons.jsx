@@ -17,17 +17,19 @@ const ListPokemons = () => {
 
     return (
         <section>
-            <h1>La liste entière des 898 pokémons !</h1>
+            {/* <h1>La liste entière des 898 pokémons !</h1> */}
             {pokemons ? ( 
         <>
           {pokemons.map((pokemon) => {
             return (  
               <article>
-                <p>{pokemon.name}</p>
+                <h2>{pokemon.name}</h2>
+                <img src = {pokemon.image} alt=""/> 
                 <Link to={`/pokemon-details/${pokemon.id}`}>Voir le détail du pokemon</Link>
                 {pokemon.apiTypes.map((type)=>{
                         return(<>
                             <Link to={`/pokemons-by-type/${type.name}`}><p>{type.name}</p></Link>
+                            <Link to={`/pokemon-resistance/${type.name}`}><p>Liste des pokémons résistants au type {type.name}</p></Link>
                         </>
                         )
                     })}
